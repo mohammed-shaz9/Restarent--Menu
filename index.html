@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <!-- scroll top button -->
+    <button id="scrollToTopButton" class="scroll-to-top-btn">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Menu overlay -->
+    <div id="menuOverlay"></div>
+
+    <!-- header -->
+
+    <header>
+      <div class="container">
+        <nav id="navbar">
+          <div class="logo">
+            <i class="fa-solid fa-a" style="color: #fff"></i>
+            <a href="index.html">zzurro <i><b>C</b></i>affè</a>
+          </div>
+          <div id="rightSide">
+            <ul id="navLinks">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#contactUs">Contact</a></li>
+              <li><a href="about.html">About us</a></li>
+            </ul>
+            <i class="fa-solid fa-bars" id="menuToggle"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- home section -->
+
+    <section>
+      <div class="sectionOne">
+        <video autoplay muted loop class="bg-video">
+          <source src="assets/Restaur.mp4" type="video/mp4" />
+        </video>
+        <h1>Enjoy Our Delicious Meal,"Delight in Our Delectable Meals!</h1>
+        <p>
+          Savor the perfect blend of flavors crafted to satisfy your taste buds. Our dishes are prepared with the utmost care, bringing together quality ingredients and culinary excellence. Experience a feast that indulges your senses and leaves you craving for more!
+        </p>
+      </div>
+    </section>
+
+    <!-- menu section -->
+
+    <section class="menu" id="menu">
+      <div class="container">
+        <h2>Our Menu</h2>
+        <div class="menu-items">
+          <button class="category-button" data-category="appetizers">
+            <h3>Appetizers</h3>
+            <i class="fas fa-bowl-food"></i>
+          </button>
+          <button class="category-button" data-category="mainCourse">
+            <h3>Main Courses</h3>
+            <i class="fa-solid fa-utensils"></i>
+          </button>
+          <button class="category-button" data-category="dessert">
+            <h3>Desserts</h3>
+            <i class="fa-solid fa-cheese"></i>
+          </button>
+          <button class="category-button" data-category="beverage">
+            <h3>Beverages</h3>
+            <i class="fa-solid fa-martini-glass-citrus"></i>
+          </button>
+
+          <!-- Search button -->
+
+          <div class="search-container">
+            <input type="text" id="menuSearch" placeholder="Search...">
+            <i class="fas fa-search search-icon"></i>
+          </div>
+          
+        </div>
+
+        <!-- Categories -->
+
+        <div class="menu-category active" data-category="appetizers">
+          <h3>Appetizers</h3>
+
+          <ul class="itemsUl">
+            <div class="appItem" data-ingredients="chicken, seasoning">
+              <li>Chicken Wings - <span>₹ 250</span></li>
+              <p>Succulent wings, perfectly seasoned to crispy perfection.</p>
+              <img src="assets/app1.jpg" />
+            </div>
+            <div
+              class="appItem"
+              data-ingredients="lettuce, tomatoes, feta cheese"
+            >
+              <li>Greek Salad - <span>₹400</span></li>
+              <p>A salad bursting with: lettuce, tomatoes, and feta cheese.</p>
+              <img src="assets/app2.jpg" />
+            </div>
+            <div class="appItem" data-ingredients="onions, batter">
+              <li>Onion Rings - <span>₹ 199</span></li>
+              <p>a delightful savory treat with a satisfying crunch.</p>
+              <img src="assets/app3.jpg" />
+            </div>
+          </ul>
+        </div>
+        <div class="menu-category" data-category="mainCourse">
+          <h3>Main Courses</h3>
+
+          <ul class="itemsUl">
+            <div
+              class="mainItem"
+              data-ingredients="Cheese, Beef, Tomato, Bread"
+            >
+              <li>Classic Burger - <span>₹600</span></li>
+              <p>a beef patty, cheese, lettuce, tomato, served on soft buns.</p>
+              <img src="assets/main1.jpg" />
+            </div>
+            <div class="mainItem" data-ingredients="Nuddles, Soya Sauce">
+              <li>Asian Nuddles - <span>₹1000</span></li>
+              <p>
+                a blend of flavors and textures, sure to excite your taste buds.
+              </p>
+              <img src="assets/main2.jpg" />
+            </div>
+            <div class="mainItem" data-ingredients="Salmon, Tomato Sauce">
+              <li>Salmon - <span>₹1000</li>
+              <p>
+                a rich flavor profile is perfect for grilling, or pan-searing.
+              </p>
+              <img src="assets/main3.jpg" />
+            </div>
+          </ul>
+        </div>
+        <div class="menu-category" data-category="dessert">
+          <h3>Desserts</h3>
+          <ul class="itemsUl">
+            <div class="dessItem" data-ingredients="Waffle, Fruits">
+              <li>Fruit Waffle - <span>₹540</li>
+              <p>a delightful combination of fluffy waffles with fruits.</p>
+              <img src="assets/dess1.jpg" />
+            </div>
+
+            <div class="dessItem" data-ingredients="Dough, Chocolate">
+              <li>Doughnuts - <span>₹600</li>
+              <p>
+                fluffy, and utterly indulgent, a sweet treat for any occasion.
+              </p>
+              <img src="assets/dess2.jpg" />
+            </div>
+
+            <div class="dessItem" data-ingredients="Flour, Candies">
+              <li>Cupcakes - <span>₹400</li>
+              <p>Beautifully decorated, delightful for any celebration.</p>
+              <img src="assets/dess3.jpg" />
+            </div>
+          </ul>
+        </div>
+        <div class="menu-category" data-category="beverage">
+          <h3>Beverages</h3>
+          <ul class="itemsUl">
+            <div class="bevItem" data-ingredients="Green Vegetables, Milk">
+              <li>Detox - <span>₹690</li>
+              <p>a refreshing blend vegetables to cleanse and rejuvenate.</p>
+              <img src="assets/bev1.jpg" />
+            </div>
+            <div class="bevItem" data-ingredients="Mint, Sprite, Ice">
+              <li>Mojito Cocktail - <span>₹530</span></li>
+              <p>a mix of mint, lime, and soda water, perfect for a party.</p>
+              <img src="assets/bev2.jpg" />
+            </div>
+            <div class="bevItem" data-ingredients="Milk, Vanilla">
+              <li>Milk Shake - <span>₹899</li>
+              <p>
+                creamy, and available in various flavors for a delightful treat.
+              </p>
+              <img src="assets/bev3.jpg" />
+            </div>
+          </ul>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- Contact Start -->
+
+    <section>
+      <div class="contactUs" id="contactUs">
+        <div class="container">
+          <h2>Contact Us</h2>
+          <div class="contact-info">
+            <div class="contact-item">
+              <h3>Booking</h3>
+              <p>
+                <i class="fa fa-envelope-open"></i>
+                Azzurro Caffè.com
+              </p>
+            </div>
+            <div class="contact-item">
+              <h3>General</h3>
+              <p>
+                <i class="fa fa-envelope-open"></i>
+                Azzurro@Caffè.com
+              </p>
+            </div>
+            <div class="contact-item">
+              <h3>Technical</h3>
+              <p>
+                <i class="fa fa-envelope-open"></i>
+                ANAS@Azzurro-Caffè.com
+              </p>
+            </div>
+          </div>
+          <div class="contactWrapper">
+            <div class="mapLeftSide">
+              <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.535437725996!2d78.39937737509173!3d17.424093103888176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb915a30cbe50f%3A0x6d0526a5620b9e49!2sMandi%4036%20Arabian%20Kitchen!5e0!3m2!1sen!2sin!4v1706523981516!5m2!1sen!2sin" 
+    width="600" 
+    height="450" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+            </div>
+
+            <div class="formRightSide">
+              <form id="contactForm">
+                <div class="form-flex">
+                  <div class="nameAndEmailWrapper">
+                    <div class="form-item">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          placeholder=" "
+                        />
+                        <label for="name">Your Name</label>
+                      </div>
+                    </div>
+                    <div class="form-item">
+                      <div class="form-floating">
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          placeholder=" "
+                        />
+                        <label for="email">Your Email</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-item">
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="subject"
+                        placeholder=" "
+                      />
+                      <label for="subject">Subject</label>
+                    </div>
+                  </div>
+                  <div class="form-item">
+                    <div class="form-floating">
+                      <textarea
+                        class="form-control"
+                        placeholder=" "
+                        id="message"
+                        style="height: 145px"
+                      ></textarea>
+                      <label for="message">Message</label>
+                    </div>
+                  </div>
+                  <div class="form-item">
+                    <button id="contactBtn" class="contactBtn" type="submit">
+                      Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact End -->
+
+    <!-- Popup -->
+
+    <div class="popupOverlay" id="popup">
+      <div class="popup-content">
+        <h2>
+          Ingredients
+          <span class="close" id="close">&times;</span>
+        </h2>
+        <ul id="ingredients-list"></ul>
+      </div>
+    </div>
+
+    <!-- footer  -->
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="logo footer-logo">
+            <i class="fa-solid fa-a" style="color: #fff"></i>
+            <a href="index.html">zzurro <i><b>C</b></i>affè</a>
+          </div>
+          <div class="footer-links">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#contactUs">Contact</a></li>
+              <li><a href="about.html">About us</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <p>Contact Us:</p>
+            <p>Rd No. 36 Sami Complex, 1st Floor, Above Cream Stone , Jubliee Hills , Hyderabad, Telangana-500033</p>
+            <p>Phone: 123 456-7890</p>
+          </div>
+        </div>
+        <div class="footer-social">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a
+            href="https://www.linkedin.com/in/anas-khan-6b7653323/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i   
+          ></a>
+          <a href="https://github.com/anaskhan12-web" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <p>This website created by © MOHAMMED SHAHNAWAZ 💛</p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/64c17729fa.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
